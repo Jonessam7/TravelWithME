@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Map with Geocoding</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-control-geocoder/2.1.7/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="./distance_loc.css">
+</head>
+<body>
+    <div class="all"><div class="main">
+    <h1>Fetch Geolocations and Calculate Route</h1>
+   
+    <div>
+        <label for="place1">Place 1:</label>
+        <input type="text" id="place1" placeholder="Enter first place">
+        <button onclick="fetchCoordinates('place1', 'start')">Fetch Location 1</button>
+    </div>
+    <div>
+        <label for="place2">Place 2:</label>
+        <input type="text" id="place2" placeholder="Enter second place">
+        <button onclick="fetchCoordinates('place2', 'end')">Fetch Location 2</button>
+    </div>
+    <div id="result"></div>
+    <div>
+        <!-- <label>Start Coordinates:</label> -->
+        <input type="hidden" id="start" readonly>
+    </div>
+    <div>
+        <!-- <label>End Coordinates:</label> -->
+        <input type="hidden" id="end" readonly>
+    </div>
+    <button onclick="calculateRoute()">Calculate Distance & Duration</button>
+    <div id="distanceResult">
+        <h2>Results:</h2>
+        <p id="distance"></p>
+        <p id="duration"></p>
+    </div>
+</div>
+<div id="map"></div>
+</div>
+</body>
+<script src="./distance_loc.js"></script>
+</html>

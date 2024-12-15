@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Updated File Path -->
+    <link rel="stylesheet" href="/chat/chat.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>chat with me</title>
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="/components/jadoo/public/assets/img/logo.svg" alt="Logo">
+            </div>
+            <span class="logo_name">🥱 Ask Me 😊</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li id="menu-distance">
+                    <a href="#">
+                        <i class="uil uil-location-point"></i>
+                        <span class="link-name">Distance</span>
+                    </a>
+                </li>
+                <li id="menu-hotel">
+                    <a href="#">
+                        <i class="uil uil-building"></i>
+                        <span class="link-name">Hotel</span>
+                    </a>
+                </li>
+                <li id="menu-nearby">
+                    <a href="#">
+                        <i class="uil uil-map-marker"></i>
+                        <span class="link-name">Nearby Places</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li>
+                    <a href="/index.html">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Section -->
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+        </div>
+
+        <div class="dash-content">
+            <!-- Chatbox Container -->
+            <div class="chat-container">
+                <div class="header">
+                    <h1>AI Chat Assistant</h1>
+                </div>
+                <div id="chat-box" class="chat-box"></div>
+                <div class="input-container">
+                    <input id="user-input" type="text" placeholder="Type your message..." />
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+
+            <!-- Distance Feature Container -->
+            <div id="location-inputs-container" class="input-container hidden">
+                <input id="from-location" type="text" placeholder="From (e.g., New York)" />
+                <input id="to-location" type="text" placeholder="To (e.g., Los Angeles)" />
+                <div class="button-container">
+                    <button class="btng" id="get-distance-btn">Get Distance</button>
+                </div>
+            </div>
+
+            <!-- Hotel Feature Container -->
+            <div id="hotel-input-container" class="input-container hidden">
+                <input id="hotel-place" type="text" placeholder="Enter a place for hotels..." />
+                <select id="star-rating">
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+                <div class="button-container">
+                    <button id="search-hotels-btn">Search Hotels</button>
+                </div>
+            </div>
+
+            <!-- Nearby Places Feature Container -->
+            <div id="nearby-input-container" class="input-container hidden">
+                <input id="place-input" type="text" placeholder="Enter a place..." />
+                <select id="place-count">
+                    <option value="1">1 Place</option>
+                    <option value="5">5 Places</option>
+                    <option value="10">10 Places</option>
+                </select>
+                <!-- <input id="radius-input" type="number" placeholder="Radius in kilometers..." /> -->
+                <div class="button-container">
+                    <button id="search-nearby-btn">Search Nearby</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="/chat/chat.js"></script>
+</body>
+
+</html>

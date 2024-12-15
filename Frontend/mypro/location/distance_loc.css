@@ -1,0 +1,156 @@
+#map { height: 400px; }
+body { font-family: Arial, sans-serif; margin: 20px; }
+input, button { margin: 5px; padding: 10px; font-size: 14px; }
+#result { margin: 10px 0; }
+/* Enhanced Styles with Advanced Animations for the Map Application */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #aaddff);
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+input {
+    margin: 5px 0;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.4s;
+}
+
+input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0077cc;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.3s;
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+button:hover {
+    background-color: #005fa3;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#result {
+    margin: 10px 0;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#distanceResult {
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+#distanceResult h2 {
+    color: #0056b3;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+#map {
+    height: 450px;
+    border: 3px solid #0056b3;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 650px;
+    animation: mapZoomIn 2s ease-in-out;
+}
+
+@keyframes mapZoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Additional Responsiveness */
+@media (max-width: 768px) {
+    .main {
+        width: 90%;
+    }
+
+    input, button {
+        width: 100%;
+    }
+}
